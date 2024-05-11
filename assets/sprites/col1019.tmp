@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://be6xudeeomiod"]
+
+[ext_resource type="Script" path="res://colider_01.gd" id="1_j40cj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rn3xx"]
+radius = 61.8547
+
+[node name="colider_01" type="Area2D" groups=["colider"]]
+script = ExtResource("1_j40cj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(477, 301)
+shape = SubResource("CircleShape2D_rn3xx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
