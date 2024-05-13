@@ -107,7 +107,8 @@ func get_value() -> Vector2:
 [node name="Delimitacoes" type="Node2D" parent="."]
 
 [node name="Background" type="Sprite2D" parent="Delimitacoes"]
-position = Vector2(640, 363)
+position = Vector2(1386.67, 783)
+scale = Vector2(2.16667, 2.16667)
 texture = ExtResource("1_2rcet")
 
 [node name="Linha_horizontal" type="StaticBody2D" parent="Delimitacoes"]
@@ -132,24 +133,32 @@ shape = SubResource("SegmentShape2D_ulvw7")
 [node name="Objetos" type="Node2D" parent="."]
 
 [node name="Pedra_01" type="StaticBody2D" parent="Objetos"]
+position = Vector2(-19, -13)
+scale = Vector2(2.195, 2.195)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Pedra_01"]
 position = Vector2(284, 262)
 shape = SubResource("CircleShape2D_6y6ve")
 
 [node name="Cemiterio" type="StaticBody2D" parent="Objetos"]
+position = Vector2(0, -8)
+scale = Vector2(2.24, 2.24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Cemiterio"]
 position = Vector2(72.75, 193.25)
 shape = SubResource("RectangleShape2D_11kvp")
 
 [node name="Casa" type="StaticBody2D" parent="Objetos"]
+position = Vector2(-18, -27)
+scale = Vector2(2.755, 2.555)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Casa"]
 position = Vector2(36, 57.5)
 shape = SubResource("RectangleShape2D_wflgr")
 
 [node name="Tanque_01" type="StaticBody2D" parent="Objetos"]
+position = Vector2(-50, -6)
+scale = Vector2(2.28, 2.28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objetos/Tanque_01"]
 position = Vector2(437, 75)
@@ -162,7 +171,7 @@ scale = Vector2(0.3, 0.3)
 disable_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_51l74")]
-position = Vector2(808, 338)
+position = Vector2(778, 400)
 scale = Vector2(0.5, 0.5)
 
 [node name="VirtualJoystick" type="Node2D" parent="."]
