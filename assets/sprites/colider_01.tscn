@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://be6xudeeomiod"]
 
-[ext_resource type="Script" path="res://colider_01.gd" id="1_j40cj"]
+[ext_resource type="Script" path="res://scripts/colider_01.gd" id="1_j40cj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rn3xx"]
 radius = 61.8547

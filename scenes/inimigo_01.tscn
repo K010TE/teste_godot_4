@@ -1,0 +1,102 @@
+[gd_scene load_steps=14 format=3 uid="uid://js2n16smpuea"]
+
+[ext_resource type="Texture2D" uid="uid://bx84b2bw8mufd" path="res://assets/sprites/spritesheet/inimigo_01.png" id="1_idh3s"]
+[ext_resource type="Script" path="res://scripts/inimigo_01.gd" id="1_nv3k4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmsw7"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(542, 0, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r7m1"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(271, 0, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqmlh"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(0, 0, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pagx"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(542, 320, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpdpj"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(271, 320, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dhxs"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(0, 320, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb8sp"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(542, 0, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70mg6"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(271, 0, 271, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcgx4"]
+atlas = ExtResource("1_idh3s")
+region = Rect2(0, 0, 271, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mapoc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmsw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r7m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqmlh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pagx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpdpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dhxs")
+}],
+"loop": true,
+"name": &"run_left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb8sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70mg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcgx4")
+}],
+"loop": true,
+"name": &"run_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_opiq0"]
+radius = 52.0
+height = 228.0
+
+[node name="Inimigo_01" type="CharacterBody2D"]
+script = ExtResource("1_nv3k4")
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -3)
+sprite_frames = SubResource("SpriteFrames_mapoc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-32, -22)
+shape = SubResource("CapsuleShape2D_opiq0")

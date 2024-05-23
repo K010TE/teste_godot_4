@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dh4egsedbli6j" path="res://scenes/cena_01.png" id="1_2rcet"]
 [ext_resource type="PackedScene" uid="uid://ceky5wkg5dn1y" path="res://assets/sprites/player.tscn" id="2_51l74"]
-[ext_resource type="PackedScene" uid="uid://js2n16smpuea" path="res://inimigo_01.tscn" id="3_akixa"]
+[ext_resource type="PackedScene" uid="uid://js2n16smpuea" path="res://scenes/inimigo_01.tscn" id="3_akixa"]
 [ext_resource type="Texture2D" uid="uid://bjigmyoswhhn1" path="res://icon.svg" id="4_7mxbm"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wfi15"]
