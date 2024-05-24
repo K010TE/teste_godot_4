@@ -8,10 +8,6 @@ func _ready():
 		button.connect("mouse_entered", Callable(self, "mouse_interaction").bind(button, "entered"))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func on_button_pressed(button: Button):
 	match button.name:
 		"Play":
@@ -27,3 +23,10 @@ func mouse_interaction(button: Button, state: String):
 			
 		"entered":
 			button.modulate.a = 0.5
+			
+func _input(event):
+	if event is InputEventScreenTouch:
+		if event.is_pressed():
+			print("Screen touched at: ", event.position)
+		else:
+			print("Touch released at: ", event.position)
