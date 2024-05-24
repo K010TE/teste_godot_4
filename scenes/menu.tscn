@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxfd7okt7r5o1"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_ybisi"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybisi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GameName" type="Label" parent="."]
+custom_minimum_size = Vector2(650, 51)
+layout_mode = 2
+offset_left = 216.0
+offset_top = 120.0
+offset_right = 866.0
+offset_bottom = 187.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Mutant Genesis"
+horizontal_alignment = 1
+
+[node name="MadeBy" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -63.0
+offset_right = 116.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Placeholder" type="Label" parent="MadeBy"]
+visible = false
+layout_mode = 2
+text = "Feito por "
+
+[node name="Button" type="Button" parent="MadeBy" groups=["button"]]
+modulate = Color(8.18223e-07, 0.82958, 0.227292, 1)
+self_modulate = Color(0.720467, 0.720468, 0.720467, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "19GAMES"
+flat = true
+
+[node name="Buttons" type="Label" parent="."]
+layout_mode = 0
+offset_top = -31.0
+offset_right = 40.0
+offset_bottom = -8.0
+
+[node name="Play" type="Button" parent="Buttons" groups=["button"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 364.0
+offset_top = 276.5
+offset_right = 684.0
+offset_bottom = 356.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Jogar"
+icon_alignment = 1
+
+[node name="Controls" type="Button" parent="Buttons" groups=["button"]]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 392.0
+offset_right = 704.0
+offset_bottom = 472.0
+theme_override_font_sizes/font_size = 32
+text = "Controles"
+
+[node name="Quit" type="Button" parent="Buttons" groups=["button"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 364.0
+offset_top = 484.5
+offset_right = 684.0
+offset_bottom = 564.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Sair"
