@@ -1,12 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4oxoeoma5rbs"]
+[gd_scene load_steps=3 format=3 uid="uid://c4oxoeoma5rbs"]
 
 [ext_resource type="PackedScene" uid="uid://csjhycpkjybtx" path="res://cenas/player.tscn" id="1_3ixky"]
+[ext_resource type="PackedScene" uid="uid://c2n8imwcqbcbu" path="res://cenas/mapa_01.tscn" id="1_55vcl"]
 
 [node name="mapa" type="Node2D"]
 
-[node name="Line2D" type="Line2D" parent="."]
-points = PackedVector2Array(199, 41, 215, 54, 231, 69, 244, 58, 468, 108, 509, 123, 452, 195, 290, 215, 127, 276, 61, -16)
-width = 100.0
-default_color = Color(0, 1, 1, 1)
+[node name="Mapa01" parent="." instance=ExtResource("1_55vcl")]
+scale = Vector2(2, 2)
 
-[node name="player" parent="Line2D" instance=ExtResource("1_3ixky")]
+[node name="player" parent="." instance=ExtResource("1_3ixky")]

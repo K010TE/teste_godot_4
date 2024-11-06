@@ -108,8 +108,8 @@ scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_24omf")
 animation = &"dash"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.568851
+frame = 1
+frame_progress = 0.711148
 
 [node name="animator" type="AnimationPlayer" parent="."]
 

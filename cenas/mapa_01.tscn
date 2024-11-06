@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2n8imwcqbcbu"]
+
+[ext_resource type="Texture2D" uid="uid://bf2vc1fnhfqh5" path="res://green-lawn-top-view-flat-cartoon-illustration-grass-bushes-summer-field-funny-background-meadow-temp.png" id="1_vm4il"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lklke"]
+radius = 213.0
+height = 426.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h7w8l"]
+radius = 194.093
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eiuc6"]
+radius = 194.041
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4ybf"]
+radius = 196.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlsg3"]
+size = Vector2(808.5, 3.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rchad"]
+size = Vector2(807, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fqbx"]
+size = Vector2(12, 838)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw7b1"]
+size = Vector2(10, 830)
+
+[node name="Mapa01" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_vm4il")
+
+[node name="collisionBall02" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(336, -345)
+shape = SubResource("CapsuleShape2D_lklke")
+
+[node name="collisionBall01" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-331, -316)
+shape = SubResource("CircleShape2D_h7w8l")
+
+[node name="collisionBall04" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-334, 330)
+shape = SubResource("CircleShape2D_eiuc6")
+
+[node name="collisionBall03" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(327, 359)
+shape = SubResource("CircleShape2D_h4ybf")
+
+[node name="collisionLineDown" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(3, 403)
+shape = SubResource("RectangleShape2D_mlsg3")
+
+[node name="collisionLineUp" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, -407)
+shape = SubResource("RectangleShape2D_rchad")
+
+[node name="collisionLineRight" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(398, 0)
+shape = SubResource("RectangleShape2D_3fqbx")
+
+[node name="collisionLineLeft" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-401, -7)
+shape = SubResource("RectangleShape2D_rw7b1")
