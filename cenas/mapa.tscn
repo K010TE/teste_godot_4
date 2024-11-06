@@ -5,6 +5,13 @@
 
 [node name="mapa" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2191.0
+offset_top = -2098.0
+offset_right = 2348.0
+offset_bottom = 1835.0
+color = Color(0.654902, 0.831373, 0.164706, 1)
+
 [node name="Mapa01" parent="." instance=ExtResource("1_55vcl")]
 scale = Vector2(2, 2)
 
