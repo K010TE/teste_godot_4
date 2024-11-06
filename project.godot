@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Animacao"
+config/name="teste_godot_4"
 run/main_scene="res://cenas/mapa.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
