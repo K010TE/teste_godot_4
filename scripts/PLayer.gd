@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var move_speed = 300.0
 @export var dash_distance = 400.0  # Distância que o dash deve percorrer
 @export var dash_duration = 0.4  # Duração do dash em segundos
-@export var dash_cooldown = 3.0  # Tempo de recarga do dash em segundos
+@export var dash_cooldown = 0.1  # Tempo de recarga do dash em segundos
 @export var acceleration: float = 0.4
 @onready var animation := $anim as AnimatedSprite2D
 @onready var hand := $Hand as Node2D
