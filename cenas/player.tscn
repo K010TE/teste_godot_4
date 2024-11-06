@@ -1,9 +1,29 @@
-[gd_scene load_steps=12 format=3 uid="uid://csjhycpkjybtx"]
+[gd_scene load_steps=17 format=3 uid="uid://csjhycpkjybtx"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_25b6s"]
 [ext_resource type="Texture2D" uid="uid://70cldjeb2g2q" path="res://Personagem-02_Prancheta 1.png" id="2_ns4tu"]
 [ext_resource type="Script" path="res://scripts/hand.gd" id="3_ru4ui"]
 [ext_resource type="Texture2D" uid="uid://2gsdyjidgxnk" path="res://Arma-01.png" id="4_bo0cw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o8nx"]
+atlas = ExtResource("2_ns4tu")
+region = Rect2(533, 0, 533, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjwwx"]
+atlas = ExtResource("2_ns4tu")
+region = Rect2(0, 1072, 533, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nooil"]
+atlas = ExtResource("2_ns4tu")
+region = Rect2(533, 1072, 533, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee262"]
+atlas = ExtResource("2_ns4tu")
+region = Rect2(1066, 1072, 533, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwsiv"]
+atlas = ExtResource("2_ns4tu")
+region = Rect2(1599, 1072, 533, 536)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v2h2h"]
 atlas = ExtResource("2_ns4tu")
@@ -27,6 +47,26 @@ region = Rect2(1599, 0, 533, 536)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_24omf"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o8nx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjwwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nooil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee262")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwsiv")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v2h2h")
@@ -66,10 +106,10 @@ script = ExtResource("1_25b6s")
 position = Vector2(1, 0)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_24omf")
-animation = &"walk_right"
+animation = &"dash"
 autoplay = "idle"
 frame = 2
-frame_progress = 0.796388
+frame_progress = 0.568851
 
 [node name="animator" type="AnimationPlayer" parent="."]
 
