@@ -106,10 +106,8 @@ script = ExtResource("1_25b6s")
 position = Vector2(1, 0)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_24omf")
-animation = &"dash"
+animation = &"walk_right"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.711148
 
 [node name="animator" type="AnimationPlayer" parent="."]
 
@@ -121,9 +119,10 @@ shape = SubResource("RectangleShape2D_yy3ux")
 script = ExtResource("3_ru4ui")
 
 [node name="Arma-01" type="Sprite2D" parent="Hand"]
-position = Vector2(4, 12)
+position = Vector2(4, 10)
 scale = Vector2(0.0823788, 0.0648148)
 texture = ExtResource("4_bo0cw")
+centered = false
 
 [node name="Animation" type="AnimationPlayer" parent="Hand"]
 root_node = NodePath("")

@@ -1,19 +1,29 @@
 extends Node2D
 
 @onready var texture := $"Arma-01" as Sprite2D
-@export var weapon_offset_right = 10  # Deslocamento para a direita
-@export var weapon_offset_left = -8  # Deslocamento para a esquerda
+@export var weapon_offset_right = 3  # Deslocamento para a direita
+@export var weapon_offset_left = -1  # Deslocamento para a esquerda
 
 func _physics_process(delta: float) -> void:
 	animate_with_mouse()
 
 func animate_with_mouse():
 	if get_direction().x > 0:
+		texture.position.y = 10
+		texture.rotation = get_direction().angle()
 		texture.flip_h = false
 		adjust_weapon_position(false)
+		
+		if  texture.flip_v == true:
+			texture.flip_v = false
+			
 	elif get_direction().x < 0:
-		texture.flip_h = true
+		texture.flip_v = true
+		texture.position.y = 13
+		texture.rotation = get_direction().angle()
 		adjust_weapon_position(true)
+	
+
 
 func get_direction() -> Vector2:
 	return global_position.direction_to(get_mouse_position())
